@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hover-shadow {
+	@apply shadow-lg hover:shadow-2xl hover:shadow-primary-300 transition-all hover:-translate-y-0.5 shadow-primary-300 border-b-2 border-primary-600
+}

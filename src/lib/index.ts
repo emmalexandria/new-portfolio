@@ -1,0 +1,1 @@
+export type IconLink = {href: string, icon: string}
