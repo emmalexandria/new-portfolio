@@ -1,12 +1,17 @@
 <script lang="ts">
-    import Icon from "@iconify/svelte";
+	import type { IconLink } from "$lib";
+	import Icon from "@iconify/svelte";
 
-	export let href: string;
 	export let target: string = "_blank";
-	export let icon: string;
 	export let style: string = "";
+	export let linkInfo: IconLink;
 </script>
 
-<a {href} {target} class="hover:text-primary-400 hover:dark:text-primary-600">
-	<Icon {icon} {style}/>
+<a
+	href={linkInfo.href}
+	{target}
+	aria-label={linkInfo.ariaLabel}
+	class="hover:text-primary-400 hover:dark:text-primary-600"
+>
+	<Icon icon={linkInfo.icon} {style} />
 </a>
